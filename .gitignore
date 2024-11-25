@@ -17,3 +17,5 @@ buildNumber.properties
 .classpath
 /
 application.properties
+persistence.xml
+src/main/resources/META-INF/persistence.xml
