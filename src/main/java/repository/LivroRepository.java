@@ -1,10 +1,14 @@
 package main.java.repository;
 
 import main.java.model.Livro;
-import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
 import java.util.Optional;
 
-public interface LivroRepository extends JpaRepository<Livro, Long> {
-    // Consulta personalizada para buscar por ISBN
-    Optional<Livro> findByIsbn(String isbn);
+public interface LivroRepository {
+    Livro save(Livro livro);                     // Salvar ou atualizar um livro
+    Optional<Livro> findById(Long id);           // Buscar livro por ID
+    Optional<Livro> findByIsbn(String isbn);     // Buscar livro por ISBN
+    List<Livro> findAll();                       // Listar todos os livros
+    void deleteById(Long id);                    // Excluir livro por ID
 }
