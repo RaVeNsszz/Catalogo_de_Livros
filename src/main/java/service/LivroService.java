@@ -1,19 +1,18 @@
 package main.java.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import main.java.model.Livro;
 import main.java.repository.LivroRepository;
 
 import java.util.List;
 import java.util.Optional;
 
-@Service
 public class LivroService {
 
-    @Autowired
-    private LivroRepository repository;
+    private final LivroRepository repository;
+
+    public LivroService(LivroRepository repository) {
+        this.repository = repository;
+    }
 
     public Livro salvarLivro(Livro livro) {
         return repository.save(livro);
