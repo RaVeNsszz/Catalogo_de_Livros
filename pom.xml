@@ -34,13 +34,6 @@
 			<artifactId>postgresql</artifactId>
 			<version>42.6.0</version>
 		</dependency>
-
-		<!-- Spring Boot (opcional) -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
-			<version>2.7.0</version> <!-- Ou qualquer versão que você precise -->
-		</dependency>
 	</dependencies>
 
 </project>
