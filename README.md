@@ -38,10 +38,16 @@ mvn package
 ## Configurando o Arquivo "application.properties"
 Se você estiver usando Spring Boot, a configuração do banco de dados deve estar no arquivo application.properties ou application.yml. Por exemplo:
 ```
-spring.datasource.url=jdbc:postgresql://localhost:5432/catalogo_livros
-spring.datasource.username=seu_usuario
-spring.datasource.password=sua_senha
-spring.jpa.hibernate.ddl-auto=update
-spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+# Configuração do banco de dados
+hibernate.connection.driver_class=org.postgresql.Driver
+hibernate.connection.url=jdbc:postgresql://localhost:5432/catalogo_livros
+hibernate.connection.username=seu_usuario
+hibernate.connection.password=sua_senha
+
+# Propriedades do Hibernate
+hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+hibernate.hbm2ddl.auto=update
+hibernate.show_sql=true
+hibernate.format_sql=true
 ```
 Este mesmo código de exemplo está disponível no arquivo ```/src/application_sample```.
